@@ -1,3 +1,3 @@
 #!/bin/bash
 
-java -classpath $GROOVY_JAR:$HOME_JARS org.codenarc.CodeNarc  "$@"
+java -classpath $GROOVY_JAR:$HOME_JARS -Dcodenarc.properties.file="file:codenarc.properties" org.codenarc.CodeNarc "$@"
