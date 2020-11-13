@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-slim AS build
+FROM openjdk:15-jdk-slim AS build
 
 RUN DEBIAN_FRONTEND=noninteractive \
     apt-get update && \
