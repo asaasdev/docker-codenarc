@@ -5,10 +5,7 @@ on:
     branches: 
       - main
     tags:
-      - '*.*.*'
-  pull_request:
-    branches:
-      - release/*
+      - 'v*.*.*'
 
 jobs:
   main:
