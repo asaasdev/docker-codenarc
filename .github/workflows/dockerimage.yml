@@ -19,7 +19,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:          
           images: |
-            jfnandopr/codenarc
+            asaasdev/codenarc
           tags: |
             type=ref,event=pr
             type=semver,pattern={{version}}
