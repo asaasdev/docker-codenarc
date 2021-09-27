@@ -13,7 +13,7 @@ WORKDIR /code/CodeNarc
 
 RUN ./gradlew --no-daemon jar
 
-FROM groovy:3.0.6
+FROM groovy:3.0.9
 
 USER root
 
