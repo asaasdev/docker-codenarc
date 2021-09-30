@@ -22,7 +22,7 @@ jobs:
             asaasdev/codenarc
           tags: |
             type=ref,event=pr
-            type=semver,pattern={{version}}
+            type=semver,pattern={{raw}}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1.2.0
