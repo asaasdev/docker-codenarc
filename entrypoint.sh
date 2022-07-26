@@ -14,13 +14,12 @@ java -jar /lib/codenarc-all.jar \
     -rulesetfiles="${INPUT_RULESETFILES}" \
     > result.txt || exit 1
 
-< result.txt \
-  | reviewdog -efm="%f:%l:%m" -efm="%f:%r:%m" \
-      -name="codenarc" \
-      -reporter="${INPUT_REPORTER:-github-pr-check}" \
-      -filter-mode="${INPUT_FILTER_MODE}" \
-      -fail-on-error="${INPUT_FAIL_ON_ERROR}" \
-      -level="${INPUT_LEVEL}" \
-      "${INPUT_REVIEWDOG_FLAGS}"
+< result.txt reviewdog -efm="%f:%l:%m" -efm="%f:%r:%m" \
+    -name="codenarc" \
+    -reporter="${INPUT_REPORTER:-github-pr-check}" \
+    -filter-mode="${INPUT_FILTER_MODE}" \
+    -fail-on-error="${INPUT_FAIL_ON_ERROR}" \
+    -level="${INPUT_LEVEL}" \
+    "${INPUT_REVIEWDOG_FLAGS}"
 
 #rm result.txt
