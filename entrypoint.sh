@@ -12,7 +12,7 @@ export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 java -jar /lib/codenarc-all.jar \
     -report="${INPUT_REPORT:-compact:stdout}" \
     -rulesetfiles="${INPUT_RULESETFILES}" \
-    > result.txt || exit 1
+    > result.txt
 
 < result.txt reviewdog -efm="%f:%l:%m" -efm="%f:%r:%m" \
     -name="codenarc" \
