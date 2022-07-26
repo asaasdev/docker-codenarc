@@ -22,4 +22,4 @@ java -jar /lib/codenarc-all.jar \
     -level="${INPUT_LEVEL}" \
     "${INPUT_REVIEWDOG_FLAGS}"
 
-#rm result.txt
+rm result.txt
