@@ -14,7 +14,7 @@ java -jar /lib/codenarc-all.jar \
     -rulesetfiles="${INPUT_RULESETFILES}" \
     > result.txt || exit 1
 
-cat result.txt \
+< result.txt \
   | reviewdog -efm="%f:%l:%m" -efm="%f:%r:%m" \
       -name="codenarc" \
       -reporter="${INPUT_REPORTER:-github-pr-check}" \
@@ -23,4 +23,4 @@ cat result.txt \
       -level="${INPUT_LEVEL}" \
       ${INPUT_REVIEWDOG_FLAGS}
 
-rm result.txt
+#rm result.txt
