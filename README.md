@@ -16,7 +16,7 @@ docker run --rm \
     --workdir /testdata \
     -e INPUT_REPORTER=local \
     -e INPUT_FILTER_MODE=nofilter \
-    -e INPUT_FAIL_ON_ERROR=true \
+    -e INPUT_FAIL_ON_ERROR=false \
     -e INPUT_LEVEL=error \
     -e INPUT_RULESETFILES=file:basic.xml \
     -v $(pwd)/testdata:/testdata \
