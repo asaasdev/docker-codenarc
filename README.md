@@ -20,6 +20,7 @@ docker run --rm \
     -e INPUT_LEVEL=error \
     -e INPUT_RULESETFILES=file:basic.xml \
     -v $(pwd)/testdata:/testdata \
+    -v $(pwd)/custom/rules:/custom/rules \
     docker.io/asaasdev/codenarc
 
 ```
